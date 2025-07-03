@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaJourney.iml" filepath="$PROJECT_DIR$/.idea/JavaJourney.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP TASK/collections/stack/stack.iml" filepath="$PROJECT_DIR$/OOP TASK/collections/stack/stack.iml" />
     </modules>
   </component>
 </project>
