@@ -3,6 +3,8 @@ package BikeAssignment;
 public class Bike {
     private boolean bikeOn;
     private int speed;
+    private int accelerate;
+
 
     public boolean getBikeStatus() {
         return bikeOn;
@@ -12,6 +14,7 @@ public class Bike {
         bikeOn = true;
 
     }
+
 
     public void bikeOff() {
         bikeOn = false;
@@ -24,7 +27,13 @@ public class Bike {
     }
 
 
-    public void accelerate() {
+    public int accelerate(int currentGear) {
+
+            accelerate += currentGear;
+
+            return accelerate;
 
     }
+
+
 }
