@@ -4,6 +4,8 @@ public class Airconditioner {
 
     private boolean power;
     private int temperature;
+    private int minimumTemperature =16  ;
+    private int maximumTemperature =30;
 
 
     public boolean getPowerStatus() {
@@ -24,11 +26,16 @@ public class Airconditioner {
     }
 
     public void increaseTemperature() {
-        temperature++;
+        if (power && temperature < maximumTemperature) {
+            temperature++;
+        }
     }
 
-    public void decreaseTempt() {
-        temperature--;
+    public void decreaseTemperature() {
+        if (power && temperature > minimumTemperature) {
+            temperature--;
+        }
+
     }
 }
 

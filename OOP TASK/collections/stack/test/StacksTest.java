@@ -11,7 +11,6 @@ public class StacksTest {
         theoStack = new MyStack(10);
     }
 
-
     @Test
     public void NewStackIsEmpty() {
         assertTrue(theoStack.isEmpty());
@@ -46,6 +45,16 @@ public class StacksTest {
     }
 
     @Test
+    public void pushTwo_popOne_StackIsEmptyTest() {
+        assertTrue(theoStack.isEmpty());
+        theoStack.push("G-string");
+        theoStack.push("A-string");
+        assertFalse(theoStack.isEmpty());
+        theoStack.pop();
+        assertFalse(theoStack.isEmpty());
+    }
+
+    @Test
     public void pushX_popShouldReturnXTest() {
         theoStack.push("G-string");
         assertEquals("G-string", theoStack.pop());
@@ -56,14 +65,17 @@ public class StacksTest {
         theoStack.push("G-string");
         theoStack.push("A-string");
         assertEquals("A-string", theoStack.pop());
-
     }
-/*
+
+
     @Test
     public void shouldThrowUnderFlowException_whenEmptyStackIsPopped() {
         assertTrue(theoStack.isEmpty());
-        assertThrows(stackUnderFlowException.class,()->theoStack.pop());
-
+        assertThrows(StackUnderFlowException.class,()->theoStack.pop());
     }
-*/
+
+
+
+
+
 }

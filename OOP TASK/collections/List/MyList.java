@@ -16,4 +16,8 @@ public class MyList {
         theoList.add(item);
         return true;
     }
+
+    public int noElement() {
+        return theoList.size();
+    }
 }

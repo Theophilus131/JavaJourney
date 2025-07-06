@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ListTest {
@@ -32,10 +33,15 @@ public class ListTest {
         String item = "orange";
         myList.add(item);
         assertTrue(myList.contains("orange"));
-
-
     }
 
+    @Test
+    public void RemoveAllElementFromTheListTest(){
+        assertTrue(myList.isEmpty());
+        String item = "orange";
+        myList.add(item);
+        assertEquals(0,myList.noElement());
+    }
 
 
 

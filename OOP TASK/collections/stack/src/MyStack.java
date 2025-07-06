@@ -18,7 +18,7 @@ public class MyStack {
     }
 
     public String pop() {
-        //if (isEmpty())throw new StackUnderFlowException();
+         if(isEmpty())throw new StackUnderFlowException();
         return myStack[--counter];
     }
 }
