@@ -1,4 +1,4 @@
-package test;
+//package test;
 
 import FileAirconditional.Airconditioner;
 import org.junit.jupiter.api.BeforeEach;
