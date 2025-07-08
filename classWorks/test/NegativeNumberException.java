@@ -1,4 +1,2 @@
-package PACKAGE_NAME;
-
-public class NegativeNumberException {
+public class NegativeNumberException extends IllegalArgumentException {
 }
