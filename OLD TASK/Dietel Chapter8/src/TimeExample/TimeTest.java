@@ -1,6 +1,6 @@
 //public class TimeTest {
 //    public static void main(String[] args){
-//        Time1 time = new Time1();
+//        TimeExample.Time1 time = new TimeExample.Time1();
 //
 //        displayTime("After time object is created", time);
 //        System.out.println();
@@ -18,7 +18,7 @@
 //
 //        displayTime("After calling setTime with invalid values", time);}
 //
-//        private static void displayTime(String header, Time1 t){
+//        private static void displayTime(String header, TimeExample.Time1 t){
 //            System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n", header, t.toUniversalString(), t.toString());
 //        }
 //

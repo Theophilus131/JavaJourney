@@ -1,3 +1,5 @@
+package TimeExample;
+
 public class Time1 {
     private int hour;
     private int minute;
