@@ -19,6 +19,11 @@ public class DiaryTest {
         assertFalse(diary.isLocked());
     }
 
+    @Test
+    public void testlockDiary_changesIsLockedToTrue() {
+        diary.lockDiary();
+        assertTrue(diary.isLocked());
+    }
 
 
 
