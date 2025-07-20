@@ -1,6 +1,9 @@
 package BankApplication;
 
 import Exceptions.*;
+import Exceptions.NegativeAmountException;
+import src.Exceptions.InsufficientFundsException;
+import src.Exceptions.InvalidPinException;
 
 public class MyAccount {
     private int balance;
@@ -40,25 +43,25 @@ public class MyAccount {
         validatePin(pin);
     }
 
-    public Object getName(){
+        public String getName(){
         return name;
 }
 
-private void validateAmount(int amount) {
+    private void validateAmount(int amount) {
     boolean amountExceedBalance = amount > balance;
     if (amountExceedBalance) {
         throw new InsufficientFundsException();
     }
 }
 
-private void validateNegativeAmount(int amount) {
+    private void validateNegativeAmount(int amount) {
     boolean amountisNegative = amount < 0;
     if (amountisNegative) {
         throw new NegativeAmountException();
     }
 }
 
-private void validatePin(String pin) {
+    private void validatePin(String pin) {
     boolean pinIsInvalid = !pin.equals(correctPin);
 
     if (pinIsInvalid) {

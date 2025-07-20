@@ -8,7 +8,7 @@
 //
 //import static org.junit.jupiter.api.Assertions.*;
 //
-//public class AccountTest {
+//    public class AccountTest {
 //    MyAccount theoAccount;
 //
 //    @BeforeEach
@@ -60,15 +60,13 @@
 //
 //        assertEquals(5_000, theoAccount.getBalance());
 //        theoAccount.withdraw(2_000, "incorrectPin");
-//
-//        assertEquals(5_000, theoAccount.getBalance());
+//       assertEquals(5_000, theoAccount.getBalance());
 //    }
 //
-//
 //    @Test
-//    public void testThatwithdrawExceedAmount_balanceException(){
-//        theoAccount.deposit(5_000);
-//        assertEquals(5_000, theoAccount.getBalance());
+//   public void testThatwithdrawExceedAmount_balanceException(){
+//       theoAccount.deposit(5_000);
+//       assertEquals(5_000, theoAccount.getBalance());
 //        assertThrows(InsufficientFundsException.class, () -> theoAccount.withdraw(6_000,"correctPin"));
 //    }
 //
@@ -87,13 +85,8 @@
 //        assertEquals("theophilus umar", theoAccount.getName());
 //    }
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //}
+//
+//
+//
+//

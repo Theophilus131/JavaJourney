@@ -1,4 +1,4 @@
-package BankApplication;
+package src.Exceptions;
 
 import Exceptions.BankAppException;
 
