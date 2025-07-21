@@ -12,6 +12,13 @@ public class DiaryTest {
         diary = new Diary("theo", "1234");
     }
 
+    @Test
+    public void testDiaryCanBeCreated(){
+        assertNotNull(diary);
+
+        assertEquals("theo", diary.getUserName());
+        assertEquals("1234", diary.getPassword());
+    }
 
     @Test
     public void testUnlockDiary_changesIsLockedToFalse() {
@@ -24,6 +31,23 @@ public class DiaryTest {
         diary.lockDiary();
         assertTrue(diary.isLocked());
     }
+
+    @Test
+    public void testThatEntryCanBe_deleted_or_removed(){
+        diary.unlockDiary();
+        assertEquals(1,diary.findEntryByID(1));
+
+    }
+
+
+    @Test
+    public void testThatDiaryEntryCanBeFindById(){
+        diary.unlockDiary();
+        assertEquals(1,diary.findEntryByID(1));
+        assertEquals(2,diary.findEntryByID(2));
+        assertEquals(1000,diary.findEntryByID(1000));
+    }
+
 
 
 

@@ -1,20 +1,27 @@
 package DiaryAssignment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Diary {
     private String userName;
     private String password;
     private boolean isLocked;
-    private List<String> entries;
+    private List<Entry> entries;
+
 
     public Diary(String userName, String password){
         this.userName = userName;
         this.password = password;
-    }
+        this.entries = new ArrayList<Entry>();
+            }
 
-    public void unlockDiary(){
-        isLocked = false;
+
+    public void unlockDiary() {
+        if(this.password.equals(password)){
+            isLocked = false;
+        }
+
     }
 
     public void lockDiary(){
@@ -25,13 +32,16 @@ public class Diary {
         return isLocked;
     }
 
-    public void createEntry(String entryName, String password){
-        for(int index = 0; index < entries.size(); index++){
-            if(entries.get(index).equals(entryName)){
-                entries.set(index, password);
+    public void createEntry(String title, String body){
+        for(int i = 0; i < entries.size(); i++){
+            if(entries.get(i).getTitle().equals(title)){
+                entries.get(i).setBody(body);
 
             }
+
         }
+
+
 
     }
 
@@ -41,7 +51,6 @@ public class Diary {
                 entries.remove(index);
             }
         }
-
 
     }
 
@@ -55,15 +64,25 @@ public class Diary {
         return id;
     }
 
-    public void updateEntry(int id,String name,String password){
-        for(int index = 0; index < entries.size(); index++){
-            if( entries.get(index).equals(id) ){
-                entries.set(index, name);
+    public void updateEntry(int id,String title,String body){
+        for(Entry entry: entries){
+            if(entry.getId() == id){
+                entry.setTitle(title);
+                entry.setBody(body);
 
-            }
+               }
+                   }
+    }
+
+    public String getUserName(){
+
+        return userName;
         }
 
+        public String getPassword(){
+        return password;
+        }
     }
 
 
-}
+
