@@ -52,6 +52,23 @@ public class PhoneBookTest {
         phoneBook.addContact("theo","umar", "08104116411");
         assertEquals("08104116411",phoneBook.findContactByPhoneNumber("08104116411"));
     }
+
+    @Test
+    public void testContactsCanBeDeleted() {
+        phoneBook.addContact("theo","umar", "08104116411");
+        phoneBook.deleteContact("theo","umar", "08104116411");
+        assertEquals(1,phoneBook.Size());
+
+    }
+
+    @Test
+    public void testContactAddedCanBeEdited() {
+        phoneBook.addContact("theo","umar", "08104116411");
+        assertEquals("theo",phoneBook.findContactByFirstName("theo"));
+        phoneBook.editContact("john","tims", "08087654378");
+        assertEquals("john",phoneBook.findContactByFirstName("john"));
+
+    }
 }
 
 
