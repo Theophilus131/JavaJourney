@@ -46,6 +46,12 @@ public class PhoneBookTest {
         phoneBook.addContact("theo","umar", "08104116411");
         assertEquals("umar",phoneBook.findContactByLastName("umar"));
     }
+
+    @Test
+    public void testIfIAddContact_ICanFindContactByPhoneNumber(){
+        phoneBook.addContact("theo","umar", "08104116411");
+        assertEquals("08104116411",phoneBook.findContactByPhoneNumber("08104116411"));
+    }
 }
 
 
