@@ -44,7 +44,7 @@ public class PhoneBook {
         return null;
     }
 
-    
+
     public void deleteContact(Contacts contact) {
         for (int index = 0; index < contacts.size(); index++) {
             if (contacts.get(index).equals(contact)) {
@@ -53,6 +53,13 @@ public class PhoneBook {
         }
     }
 
+    public void editContact(Contacts contact) {
+        for (int index = 0; index < contacts.size(); index++) {
+            if (contacts.get(index).equals(contact)) {
+                contacts.set(index, contact);
+            }
+        }
+    }
 
 
 
