@@ -62,7 +62,7 @@ public class PhoneBook {
     }
 
 
-
-
-
+    public boolean isEmpty() {
+        return contacts.isEmpty();
+    }
 }

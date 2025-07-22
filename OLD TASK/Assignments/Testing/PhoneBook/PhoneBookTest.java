@@ -12,12 +12,13 @@ public class PhoneBookTest {
 
     @BeforeEach
     public void setThisFirst(){
-        phoneBook = new PhoneBook("theo", "umar");
+       phoneBook = new PhoneBook();
     }
 
 
     @Test
-    public void testFirstName_can_be_set() {
+    public void testPhoneBookIsEmpty() {
+        assertTrue(phoneBook.isEmpty());
 
     }
 }
