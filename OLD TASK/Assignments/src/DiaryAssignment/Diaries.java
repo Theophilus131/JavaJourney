@@ -11,10 +11,14 @@ public class Diaries {
    }
 
     public String add(String firstName, String lastName){
-       this.diaries.add(new Diary(firstName, lastName));
-       return firstName + " " + lastName;
-
+        for(Diary diary : diaries){
+            if(diary.getUserName().equals(firstName) && diary.getUserName().equals(lastName)){
+                diaries.add(diary);
+            }
+        }
+        return firstName;
     }
+
 
     public String findByUserName(String userName){
         for (Diary diary : diaries) {
@@ -27,7 +31,11 @@ public class Diaries {
     }
 
     public void delete(String firstName,  String lastName) {
-       this.diaries.remove(new Diary(firstName, lastName));
+       for(Diary diary : diaries){
+           if(diary.getUserName().equals(firstName) && diary.getUserName().equals(lastName)){
+               diaries.remove(diary);
+           }
+       }
     }
 
 }
