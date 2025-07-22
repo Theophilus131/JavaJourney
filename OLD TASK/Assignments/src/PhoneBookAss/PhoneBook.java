@@ -13,8 +13,17 @@ public class PhoneBook {
     }
 
     public String findContactByFirstName(String firstName) {
+        for(int i = 0; i < contacts.size(); i++) {
+            if(contacts.get(i).getFirstName().equals(firstName)){
+                return firstName;
+            }
+        }
+        return null;
 
     }
+
+
+
 
     public String findContactByLastName(String lastName) {
        for(int i = 0; i < contacts.size(); i++) {
@@ -35,9 +44,7 @@ public class PhoneBook {
         return null;
     }
 
-
-
-
+    
     public void deleteContact(Contacts contact) {
         for (int index = 0; index < contacts.size(); index++) {
             if (contacts.get(index).equals(contact)) {
