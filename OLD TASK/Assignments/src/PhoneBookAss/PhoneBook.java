@@ -17,15 +17,22 @@ public class PhoneBook {
     }
 
     public String findContactByLastName(String lastName) {
+       for(int i = 0; i < contacts.size(); i++) {
+           if(contacts.get(i).getLastName().equals(lastName)){
+               return lastName;
+           }
+       }
+       return null;
 
         }
 
     public String findContactByPhoneNumber(String phoneNumber) {
         for( int i = 0; i < contacts.size(); i++ ) {
             if(contacts.get(i).getPhoneNumber().equals(phoneNumber)) {
-
+                return phoneNumber;
             }
         }
+        return null;
     }
 
 
