@@ -7,6 +7,17 @@ public class PhoneBook {
     private List<Contacts> contacts = new ArrayList<Contacts>();
 
 
+
+    public boolean isEmpty() {
+        return contacts.isEmpty();
+    }
+
+    public int Size() {
+        return contacts.size();
+
+    }
+
+
     public void addContact(String firstName, String lastName, String phoneNumber) {
         contacts.add(new Contacts(firstName, lastName, phoneNumber));
 
@@ -18,11 +29,9 @@ public class PhoneBook {
                 return firstName;
             }
         }
-        return null;
+        return firstName;
 
     }
-
-
 
 
     public String findContactByLastName(String lastName) {
@@ -62,7 +71,5 @@ public class PhoneBook {
     }
 
 
-    public boolean isEmpty() {
-        return contacts.isEmpty();
-    }
+
 }

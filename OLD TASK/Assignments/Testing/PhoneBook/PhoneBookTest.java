@@ -34,11 +34,18 @@ public class PhoneBookTest {
         phoneBook.addContact("umar","umar", "08108106411");
         assertEquals(2,phoneBook.Size());
     }
-
+    @Test
+    public void testIfIAddContact_ICanFindContactByFirstName(){
+        phoneBook.addContact("theo","umar", "08104116411");
+        phoneBook.findContactByFirstName("theo");
+        assertEquals("theo",phoneBook.findContactByFirstName("theo"));
+    }
 
     @Test
-    public void testPhoneBookIsNotEmpty_ContactsCanBeRemoved() {}
-
+    public void testIfIAddContact_ICanFindContactByLastName(){
+        phoneBook.addContact("theo","umar", "08104116411");
+        assertEquals("umar",phoneBook.findContactByLastName("umar"));
+    }
 }
 
 
