@@ -23,7 +23,6 @@ public class DiaryTest {
     public void testDiaryCanBeUnLockedWithPassword(){
         diary.lockDiary();
         assertTrue(diary.isLocked());
-        diary.getPassword();
         assertEquals("1234", diary.getPassword());
     }
 
@@ -31,14 +30,14 @@ public class DiaryTest {
     public void testDiaryCanBeUnLockedWithUserName(){
         diary.lockDiary();
         assertTrue(diary.isLocked());
-        diary.getUserName();
         assertEquals("theo", diary.getUserName());
     }
 
     @Test
     public void testDiaryEntryCanBe_Created(){
         diary.createEntry("Home alone", "it is what is is");
-        assertEquals(diary.createEntry("Home alone", "it is what is is"));
+        assertEquals(1, diary.getSize());
+
 
     }
 

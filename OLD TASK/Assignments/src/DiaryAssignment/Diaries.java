@@ -10,29 +10,28 @@ public class Diaries {
        diaries = new ArrayList<>();
    }
 
-    public String add(String firstName, String lastName){
+    public void add(String firstName, String lastName){
         for(Diary diary : diaries){
             if(diary.getUserName().equals(firstName) && diary.getUserName().equals(lastName)){
                 diaries.add(diary);
             }
         }
-        return firstName;
+
     }
 
-
-    public String findByUserName(String userName){
+    public Diary findByUserName(String userName){
         for (Diary diary : diaries) {
             if(diary.getUserName().equals(userName)){
-
+                return diary;
             }
         }
 
-        return userName;
+        return null;
     }
 
-    public void delete(String firstName,  String lastName) {
+    public void delete(String userName) {
        for(Diary diary : diaries){
-           if(diary.getUserName().equals(firstName) && diary.getUserName().equals(lastName)){
+           if(diary.getUserName().equals(userName)){
                diaries.remove(diary);
            }
        }

@@ -28,22 +28,19 @@ public class Diary {
         isLocked = true;
     }
 
+    public boolean isLocked() {
+        return isLocked;
+    }
 
     public void createEntry(String title, String body){
-        for(int i = 0; i < entries.size(); i++){
-            if(entries.get(i).getTitle().equals(title)){
-                entries.get(i).setBody(body);
-
-            }
-
-        }
+        entries.add(new Entry(5, title, body));
 
     }
 
     public void deleteEntry(int entryID ){
         for( int index = 0; index < entries.size(); index++ ){
-            if( entries.get(index).equals(entryID) ){
-                entries.remove(index);
+            if( entries.get(index).getId() ==(entryID) ){
+                entries.remove(0);
             }
         }
 
@@ -75,10 +72,16 @@ public class Diary {
         }
 
         public String getPassword(){
-
         return password;
         }
+
+    public int getSize() {
+        return entries.size();
     }
+
+}
+
+
 
 
 

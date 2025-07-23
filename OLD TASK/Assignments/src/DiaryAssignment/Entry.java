@@ -46,4 +46,6 @@ public class Entry {
     public void setDateCreated(LocalDateTime dateCreated) {
         this.dateCreated = dateCreated;
     }
+
+
 }
