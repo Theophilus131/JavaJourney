@@ -38,9 +38,7 @@ public class DiaryTest {
         diary.createEntry("Home alone", "it is what is is");
         assertEquals(1, diary.getSize());
 
-
     }
-
 
     @Test
     public void testUnlockDiary_changesIsLockedToFalse() {
@@ -67,6 +65,15 @@ public class DiaryTest {
         assertEquals(1,diary.findEntryByID(1));
         assertEquals(2,diary.findEntryByID(2));
         assertEquals(1000,diary.findEntryByID(1000));
+    }
+
+    @Test
+    public void testThatEntryCanBeRemoved(){
+        diary.unlockDiary();
+        diary.createEntry("Home alone", "it is what is is");
+        diary.deleteEntry(2);
+
+
     }
 
 
