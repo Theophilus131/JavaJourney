@@ -16,10 +16,10 @@ public class Diary {
         this.entries = new ArrayList<Entry>();
             }
 
-
     public void unlockDiary() {
         if(this.password.equals(password)){
             isLocked = false;
+
         }
 
     }
@@ -28,9 +28,6 @@ public class Diary {
         isLocked = true;
     }
 
-    public boolean isLocked() {
-        return isLocked;
-    }
 
     public void createEntry(String title, String body){
         for(int i = 0; i < entries.size(); i++){
@@ -40,8 +37,6 @@ public class Diary {
             }
 
         }
-
-
 
     }
 
@@ -80,6 +75,7 @@ public class Diary {
         }
 
         public String getPassword(){
+
         return password;
         }
     }

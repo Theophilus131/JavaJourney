@@ -15,10 +15,33 @@ public class DiaryTest {
     @Test
     public void testDiaryCanBeCreated(){
         assertNotNull(diary);
-
         assertEquals("theo", diary.getUserName());
         assertEquals("1234", diary.getPassword());
     }
+
+    @Test
+    public void testDiaryCanBeUnLockedWithPassword(){
+        diary.lockDiary();
+        assertTrue(diary.isLocked());
+        diary.getPassword();
+        assertEquals("1234", diary.getPassword());
+    }
+
+    @Test
+    public void testDiaryCanBeUnLockedWithUserName(){
+        diary.lockDiary();
+        assertTrue(diary.isLocked());
+        diary.getUserName();
+        assertEquals("theo", diary.getUserName());
+    }
+
+    @Test
+    public void testDiaryEntryCanBe_Created(){
+        diary.createEntry("Home alone", "it is what is is");
+        assertEquals(diary.createEntry("Home alone", "it is what is is"));
+
+    }
+
 
     @Test
     public void testUnlockDiary_changesIsLockedToFalse() {
@@ -36,7 +59,6 @@ public class DiaryTest {
     public void testThatEntryCanBe_deleted_or_removed(){
         diary.unlockDiary();
         assertEquals(1,diary.findEntryByID(1));
-
     }
 
 
