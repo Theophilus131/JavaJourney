@@ -26,11 +26,7 @@ public class Diaries {
     }
 
     public void delete(String userName) {
-       for(Diary diary : diaries){
-           if(diary.getUserName().equals(userName)){
-               diaries.remove(diary);
-           }
-       }
+       diaries.remove(findByUserName(userName));
     }
 
     public int getSize() {

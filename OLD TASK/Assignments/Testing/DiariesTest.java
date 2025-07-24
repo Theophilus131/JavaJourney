@@ -12,7 +12,6 @@ public class DiariesTest {
         myDiary = new Diaries();
     }
 
-
     @Test
     public void testDiariesCanBeAddedBYFirstNameAndLastName(){
         myDiary.add("John","Doe");
@@ -25,11 +24,13 @@ public class DiariesTest {
     public void testDiaryCanBeLookForBy_UserName(){
         myDiary.add("John","Doe");
        assertEquals("John", myDiary.findByUserName("John").getUserName());
-
     }
 
     @Test
     public void testThatEntryCanBe_deleted_or_removed(){
+    myDiary.add("John","Doe");
+    myDiary.delete("John");
+    assertEquals(0,myDiary.getSize());
 
 
     }
