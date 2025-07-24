@@ -84,6 +84,13 @@ public class DiaryTest {
         assertEquals(5,diary.getid());
     }
 
+    @Test
+    public void testThatICanDeleteEntry(){
+        diary.unlockDiary();
+        diary.createEntry("Home alone", "it is what is is");
+        diary.deleteEntry(5);
+        assertEquals(5,diary.getid());
+    }
 
 
 

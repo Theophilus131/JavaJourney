@@ -12,6 +12,7 @@ public class Diaries {
 
     public void add(String firstName, String lastName){
                 diaries.add(new Diary(firstName,lastName));
+
             }
 
 
@@ -27,6 +28,8 @@ public class Diaries {
 
     public void delete(String userName) {
        diaries.remove(findByUserName(userName));
+
+
     }
 
     public int getSize() {
