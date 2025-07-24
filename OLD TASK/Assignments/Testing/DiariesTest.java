@@ -15,7 +15,10 @@ public class DiariesTest {
 
     @Test
     public void testDiariesCanBeAddedBYFirstNameAndLastName(){
-        assertEquals("theo umar",myDiary.add("theo", "umar"));
+        myDiary.add("John","Doe");
+        assertEquals(1,myDiary.getSize());
+       myDiary.add("Jane","Doe");
+      assertEquals(2,myDiary.getSize());
     }
 
     @Test

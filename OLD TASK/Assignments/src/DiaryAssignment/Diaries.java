@@ -11,13 +11,9 @@ public class Diaries {
    }
 
     public void add(String firstName, String lastName){
-        for(Diary diary : diaries){
-            if(diary.getUserName().equals(firstName) && diary.getUserName().equals(lastName)){
-                diaries.add(diary);
+                diaries.add(new Diary(firstName,lastName));
             }
-        }
 
-    }
 
     public Diary findByUserName(String userName){
         for (Diary diary : diaries) {
@@ -37,6 +33,9 @@ public class Diaries {
        }
     }
 
+    public int getSize() {
+       return diaries.size();
+    }
 }
 
 
