@@ -43,5 +43,14 @@ public class DiariesTest {
 
     }
 
+    @Test
+    public void testThatEntryCanAddTwoEntries_AndDeleteAllEntries(){
+        myDiary.add("John","Doe");
+        myDiary.add("Jane","Doe");
+        myDiary.delete("John");
+        myDiary.delete("Jane");
+        assertEquals(0,myDiary.getSize());
+    }
+
 
 }
