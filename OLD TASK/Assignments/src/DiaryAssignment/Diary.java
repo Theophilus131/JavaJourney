@@ -46,7 +46,7 @@ public class Diary {
 
     }
 
-    // check find account by account number in bank
+
     public int findEntryByID(int id){
         for(int index = 0; index < entries.size(); index++){
             if( entries.get(index).getId() == id ){
@@ -80,6 +80,9 @@ public class Diary {
         return entries.size();
     }
 
+    public int getid() {
+        return entries.get(0).getId();
+    }
 }
 
 

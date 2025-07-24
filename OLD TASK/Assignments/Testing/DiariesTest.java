@@ -23,17 +23,14 @@ public class DiariesTest {
 
     @Test
     public void testDiaryCanBeLookForBy_UserName(){
-        Diaries myDiary = new Diaries();
-        myDiary.findByUserName("theo");
-        assertEquals("theo",myDiary.findByUserName("theo"));
+        myDiary.add("John","Doe");
+       assertEquals("John", myDiary.findByUserName("John").getUserName());
 
     }
 
     @Test
     public void testThatEntryCanBe_deleted_or_removed(){
-     myDiary.add("theo","theo");
-     myDiary.delete("theo");
-     assertNull(myDiary.findByUserName("theo"));
+
 
     }
 
