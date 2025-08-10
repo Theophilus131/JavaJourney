@@ -36,11 +36,11 @@ public class DeskPhone implements Telephone{
     public boolean callPhone(String phoneNumber) {
        if(phoneNumber == myNumber){
            isRinging = true;
-           return true;
+           System.out.println("desk phone is ringing");;
        }else {
            isRinging = false;
        }
-       return false;
+       return isRinging;
     }
 
     @Override
