@@ -3,6 +3,7 @@ package TeLephoneTask;
 public class MobilePhone implements Telephone{
     private String myNumber;
     private boolean isRinging;
+    private boolean isPoweredOn;
 
     public MobilePhone(String myNumber){
         this.myNumber = myNumber;
@@ -10,7 +11,8 @@ public class MobilePhone implements Telephone{
 
     @Override
     public void powerOn() {
-        System.out.println("mobile phone is always powered on");
+        isPoweredOn = true;
+        System.out.println("power is on");
     }
     @Override
     public void dial(String phoneNumber) {
@@ -18,18 +20,18 @@ public class MobilePhone implements Telephone{
     }
     @Override
     public void answer() {
-        if(isRinging){
+        if(isRinging && isPoweredOn){
             System.out.println("answering mobile phone");
             isRinging = false;
         }else {
-            System.out.println("mobile phone is not ringing");
+
         }
     }
     @Override
     public boolean callPhone(String phoneNumber) {
-        if(phoneNumber == myNumber){
+        if(phoneNumber == myNumber && isPoweredOn){
             isRinging = true;
-            System.out.println("mobile phone is ringing");;
+            System.out.println("either the phone is not ringing or the phone is not powered on");
         }
         return isRinging;
     }
