@@ -10,26 +10,41 @@ public class DeskPhone implements Telephone{
 
     @Override
     public void powerOn() {
+        System.out.println("desk phone is always powered on");
 
     }
 
     @Override
     public void dial(String phoneNumber) {
+        System.out.println("Now ringing " + phoneNumber + "on desk phone");
 
     }
 
     @Override
     public void answer() {
+        if(isRinging){
+            System.out.println("answering desk phone");
+            isRinging = false;
+
+        }else {
+            System.out.println("desk phone is not ringing");
+        }
 
     }
 
     @Override
-    public boolean callPhone() {
-        return false;
+    public boolean callPhone(String phoneNumber) {
+       if(phoneNumber == myNumber){
+           isRinging = true;
+           return true;
+       }else {
+           isRinging = false;
+       }
+       return false;
     }
 
     @Override
     public boolean isRinging() {
-        return false;
+        return isRinging;
     }
 }
